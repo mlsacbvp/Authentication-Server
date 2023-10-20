@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import { uploadFile } from "./services/api";
+// import nav from "./components/nav";
+import NavBar from "./components/NavBar";
 function App() {
   const fileInputRef = useRef();
   const onUploadClick = () => {
@@ -20,7 +22,11 @@ function App() {
     getImage();
   }, [file]);
   return (
+
+
+    
     <div className="container">
+    <header><NavBar/></header>
       {/* <img src={logo} alt="banner" /> */}
       <div className="wrapper">
         <h1>FILE VORTEX</h1>
@@ -34,6 +40,7 @@ function App() {
           onChange={(e) => setFile(e.target.files[0])}
         />
       </div>
+
     </div>
   );
 }
