@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import { uploadFile } from "./services/api";
+
 function App() {
   const fileInputRef = useRef();
   const onUploadClick = () => {
@@ -20,21 +21,23 @@ function App() {
     getImage();
   }, [file]);
   return (
-    <div className="container">
-      {/* <img src={logo} alt="banner" /> */}
-      <div className="wrapper">
-        <h1>FILE VORTEX</h1>
-        <p className="tag">Unleash the Power of Seamless Sharing</p>
-        <button onClick={() => onUploadClick()}>Upload</button>
+    <>
+      <div className="container">
+        {/* <img src={logo} alt="banner" /> */}
+        <div className="wrapper">
+          <h1>FILE VORTEX</h1>
+          <p className="tag">Unleash the Power of Seamless Sharing</p>
+          <button onClick={() => onUploadClick()}>Upload</button>
 
-        <input
-          type="file"
-          ref={fileInputRef}
-          style={{ display: "none" }}
-          onChange={(e) => setFile(e.target.files[0])}
-        />
+          <input
+            type="file"
+            ref={fileInputRef}
+            style={{ display: "none" }}
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
