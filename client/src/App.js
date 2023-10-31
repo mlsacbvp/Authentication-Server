@@ -1,8 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import { uploadFile } from "./services/api";
+<<<<<<< HEAD
+
+=======
 // import nav from "./components/nav";
 import NavBar from "./components/NavBar";
+>>>>>>> b2d392716cc90e88117cf3628e849b570fe5a1e3
 function App() {
   const fileInputRef = useRef();
   const onUploadClick = () => {
@@ -22,6 +26,15 @@ function App() {
     getImage();
   }, [file]);
   return (
+<<<<<<< HEAD
+    <>
+      <div className="container">
+        {/* <img src={logo} alt="banner" /> */}
+        <div className="wrapper">
+          <h1>FILE VORTEX</h1>
+          <p className="tag">Unleash the Power of Seamless Sharing</p>
+          <button onClick={() => onUploadClick()}>Upload</button>
+=======
 
 
     
@@ -32,16 +45,22 @@ function App() {
         <h1>FILE VORTEX</h1>
         <p className="tag">Unleash the Power of Seamless Sharing</p>
         <button onClick={() => onUploadClick()}>Upload</button>
+>>>>>>> b2d392716cc90e88117cf3628e849b570fe5a1e3
 
-        <input
-          type="file"
-          ref={fileInputRef}
-          style={{ display: "none" }}
-          onChange={(e) => setFile(e.target.files[0])}
-        />
+          <input
+            type="file"
+            ref={fileInputRef}
+            style={{ display: "none" }}
+            onChange={(e) => setFile(e.target.files[0])}
+          />
+        </div>
       </div>
+<<<<<<< HEAD
+    </>
+=======
 
     </div>
+>>>>>>> b2d392716cc90e88117cf3628e849b570fe5a1e3
   );
 }
 
